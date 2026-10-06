@@ -3,6 +3,9 @@ node_modules/
 .pnpm-store/
 package-lock.json
 yarn.lock
+.expo/
+expo-env.d.ts
+
 
 # Build Output
 dist/
