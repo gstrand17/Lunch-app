@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: lunch_postgres
+    environment:
+      POSTGRES_DB: lunch_app_db
+      POSTGRES_USER: lunch_admin
+      POSTGRES_PASSWORD: lunchapp2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data:Z
+      - ./db:/docker-entrypoint-initdb.d:Z
+volumes:
+  pgdata:
